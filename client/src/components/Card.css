@@ -8,7 +8,7 @@
     box-sizing: border-box;
     height: 400;
     cursor: pointer;
-    flex-basis: 80%;
+    flex-basis: 15em;
 } 
 
 img {
