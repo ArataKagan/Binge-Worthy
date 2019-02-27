@@ -1,0 +1,26 @@
+.Card {
+    width: 100px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    margin: 10px;
+    box-sizing: border-box;
+    height: 400;
+    cursor: pointer;
+    flex-basis: 80%;
+} 
+
+img {
+    height: 150;
+}
+
+.Card:hover,
+.Card:active {
+    background-color: #C0DDF5;
+}
+
+.Author {
+    margin: 16px 0;
+    color: #ccc;
+}
