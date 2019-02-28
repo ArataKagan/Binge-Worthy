@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import './Landing.css';
+import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './Library.css';
 import axios from 'axios';
-import Card from './Card';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w200';
 
-class Landing extends Component {
+class Library extends Component {
     state = {
         tvs: []
     }
@@ -19,17 +20,25 @@ class Landing extends Component {
 
     render(){
         const cards = this.state.tvs.map(tv => {
-            return <Card title={tv.name} keys={tv.id} image={IMAGE_BASE_URL + tv.poster_path}/>;
+            return(
+            <article className="Card">
+                <Link to={`/tv/${tv.id}`} key={tv.id}>
+                    <img src={IMAGE_BASE_URL + tv.poster_path} alt="TV Poster"/>
+                    <div className="Info">
+                        <div className="title">{tv.name}</div>
+                    </div>
+                </Link>
+            </article>
+            );
         }); 
         
-
         return(
             <section className="Cards">
                 {cards}
             </section>
-        )
+        );
     }
 }
 
 
-export default Landing;
+export default Library;
