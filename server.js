@@ -7,9 +7,9 @@ const path = require('path');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.use("/", (req, res, next) => {
-    res.send("Welcome to TV list app");
-})
+// app.use("/", (req, res, next) => {
+//     res.send("Welcome to TV list app");
+// })
 
 app.get('/api/hello', (req, res) => {
     res.send({express: 'Hello from Express'});
