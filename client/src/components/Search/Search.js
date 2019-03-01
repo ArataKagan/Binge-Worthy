@@ -50,7 +50,7 @@ class Search extends Component {
                 />
                 <input 
                     type="submit" 
-                    class="btn btn-outline-success my-2 my-sm-0"
+                    className="btn btn-outline-success my-2 my-sm-0"
                 />
             </form>
         )
