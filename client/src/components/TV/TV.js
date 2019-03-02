@@ -1,6 +1,6 @@
 import React, {Component}  from 'react';
 import axios from 'axios';
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w200';
+const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
 
 class TV extends Component {
     state = {
@@ -10,7 +10,7 @@ class TV extends Component {
     componentDidMount(){
         axios.get(`https://api.themoviedb.org/3/tv/${this.props.match.params.id}?api_key=fb6a1d3f38c3d97f67df6d141f936f29&language=en-US`)
             .then(response => {
-                console.log(response);
+                console.log('[TV]', response);
                 this.setState({
                     selectedTV: response.data
                 })

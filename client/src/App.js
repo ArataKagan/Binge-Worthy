@@ -6,6 +6,7 @@ import './App.css';
 import Library from './components/Library/Library';
 import TV from './components/TV/TV';
 import NavBar from './components/NavBar/NavBar';
+import SearchResult from './components/SearchResult/SearchResult';
 
 class App extends Component {
   render() {
@@ -16,7 +17,8 @@ class App extends Component {
         </ nav>
         <main>
           <Route exact path='/' component={Library} />
-          <Route path='/tv/:id' component={TV} />
+          <Route exact path='/tv/:id' component={TV} />
+          <Route exact path='/tv/results/:keyword' component={SearchResult} />
         </main>
       </div>
     );

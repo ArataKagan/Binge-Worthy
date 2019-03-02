@@ -7,7 +7,7 @@ const BASE_URL = 'https://api.themoviedb.org/3/search/tv?api_key=fb6a1d3f38c3d97
 class Search extends Component { 
     state = {
         typedWords : '',
-        tvID: [],
+        keyword: [],
         redirect: false
     }
 
@@ -23,11 +23,13 @@ class Search extends Component {
         var query = this.state.typedWords.replace(/ /g, '%20');
         axios.get(BASE_URL + query)
             .then(response => {
-                var tvID = response.data.results[0].id;
-                this.setState({
-                    tvID: tvID,
-                    redirect: true
-                })
+                var searchResults = response.data.results;
+                if(searchResults.length > 0){
+                    this.setState({
+                        keyword: query,
+                        redirect: true
+                    })
+                } 
             })
         this.setState({
             typedWords: ''
@@ -36,7 +38,7 @@ class Search extends Component {
 
     render(){
         if(this.state.redirect){
-            return < Redirect to={`/tv/${this.state.tvID}`} key={this.state.tvID} />
+            return < Redirect to={`/tv/results/${this.state.keyword}`} key={this.state.keyword} />
         }
 
         return(
