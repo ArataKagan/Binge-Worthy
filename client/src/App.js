@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 /* Need to setup router to assign a path for each component*/
 /*import Route and Link from react-router-dom package */
-import { Route, Link } from 'react-router-dom';
+import { Route} from 'react-router-dom';
 import './App.css';
 import Library from './components/Library/Library';
 import TV from './components/TV/TV';

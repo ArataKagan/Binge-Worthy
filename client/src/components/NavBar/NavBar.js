@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AppNavbar extends Component {
+class NavBar extends Component {
     state = {
         isOpen: false
     }
@@ -25,4 +25,4 @@ class AppNavbar extends Component {
     }
 }
 
-export default AppNavbar
+export default NavBar

@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Library.css';
 import SearchBox from '../Search/Search';
 import axios from 'axios';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w200';
 
-class Library extends Component {
+export class Library extends Component {
     state = {
         tvs: []
     }
