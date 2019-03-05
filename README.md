@@ -8,8 +8,6 @@ ___
 
 ### React/Redux: 
 
-- Reason of the choice: 
-
 I've chosen React because I have prior experience building React applications and it's suited for building progressive web applications with its performance and fast rendering. 
 
 ### Node/Express: 
@@ -30,7 +28,7 @@ ___
 1. Go to root directory 
 2. npm run dev
 
-# How to Test
+## How to Test
 
 1. Go to client directory
 2. npm run test
