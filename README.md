@@ -34,6 +34,14 @@ ___
 2. npm run test
 
 ___ 
+## Existing features 
+
+1. A list of trending TV shows on the landing page
+2. TV show search bar 
+3. A list of potential TV titles based on your search query 
+4. Information page for each TV show 
+5. Trailer on each TV show page 
+
 
 ## Future Improvements 
 
