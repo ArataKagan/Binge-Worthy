@@ -25,7 +25,7 @@ class TV extends Component {
             .then(response => {
                 if(response.data.results){
                     response.data.results.map( result => this.setState({
-                        youtubeKey: 'http://www.youtube.com/embed/' + result.key
+                        youtubeKey: 'https://www.youtube.com/embed/' + result.key
                     }));
                 } else {
                     alert('No video for this TV');
