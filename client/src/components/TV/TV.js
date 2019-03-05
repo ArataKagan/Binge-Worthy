@@ -17,22 +17,23 @@ class TV extends Component {
     componentDidMount(){
         axios.get(`https://api.themoviedb.org/3/tv/${this.props.match.params.id}?api_key=${API_KEY}&language=en-US`)
             .then(response => {
-                console.log('[TV]', response);
                 this.setState({
                     selectedTV: response.data
                 })
             });
         axios.get(`https://api.themoviedb.org/3/tv/${this.props.match.params.id}/videos?api_key=${API_KEY}&language=en-US`)
             .then(response => {
-                console.log('[TV Youtube]', response.data.results[0].key);
-                response.data.results.map( result => this.setState({
-                    youtubeKey: 'http://www.youtube.com/embed/' + result.key
-                }));
+                if(response.data.results){
+                    response.data.results.map( result => this.setState({
+                        youtubeKey: 'http://www.youtube.com/embed/' + result.key
+                    }));
+                } else {
+                    alert('No video for this TV');
+                }
             });
         }
 
     youTubeModalShow(){
-        console.log('clicked');
         this.setState({
             showYouTubeModal: true
         })   
@@ -47,7 +48,6 @@ class TV extends Component {
 
     render(){
         const networkName = [];
-        const genres = [];
         const tv = this.state.selectedTV;
         console.log('youtube key:', this.state.youtubeKey);
 
@@ -71,9 +71,7 @@ class TV extends Component {
         for(var i in tv.networks){
             networkName.push(tv.networks[i].logo_path)
         }
-        for(var i in tv.genres){
-            genres.push(tv.genres[i].name + '/');
-        }
+        
         
         return(
             <div className='tv_container'>
@@ -85,13 +83,22 @@ class TV extends Component {
                         <h3 className='title'>{tv.name}</h3>
                         {youtubeVideo}
                     </div>
+
                     <div className='tv_info'>
                         <p className='overview' dir='auto'>{tv.overview}</p>
                         <img className='network_image' src={IMAGE_BASE_URL + networkName} alt={tv.name} />
-                        <p>First Air Date: {tv.first_air_date}</p>
-                        <p>Last Air Date: {tv.last_air_date}</p>
-                        <p>Number of Episodes: {tv.number_of_episodes} </p>
-                        <p>{genres}</p>
+                        <div className='tv_info_wrapper'>
+                            <p className='tv_info_title'>First Air Date:</p>
+                            <p>{tv.first_air_date}</p>
+                        </div>
+                        <div className='tv_info_wrapper'>
+                            <p className='tv_info_title'>Last Air Date:</p>
+                            <p>{tv.last_air_date}</p>
+                        </div>
+                        <div className='tv_info_wrapper'>
+                            <p className='tv_info_title'>Number of Episodes:</p>
+                            <p>{tv.number_of_episodes}</p>
+                        </div>
                     </div>
                 </div>
             </div>

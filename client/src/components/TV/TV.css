@@ -35,6 +35,7 @@
     size: auto;
     max-width: 70px;
     max-height: 70px;
+    padding-bottom: 10px;
 }
 
 .overview {
@@ -49,6 +50,15 @@
 .tv_info {
     width: 100%;
     /* display: block; */
+}
+
+.tv_info_title {
+    color: gray;
+}
+
+.tv_info_wrapper {
+    display: flex; 
+    justify-content: flex-start;
 }
 
 

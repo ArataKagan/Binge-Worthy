@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './SearchResult.css';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
 
 class SearchResult extends Component {
@@ -25,12 +26,13 @@ class SearchResult extends Component {
                 <Link to={`/tv/${result.id}`} key={result.id}>
                   <p>{result.name}</p>
                 </Link>
-              </article>  
+              </article> 
             );
         })
 
         return(
             <div>
+                <h3 id='search_result_sentence'>Search results of... {this.props.match.params.keyword}</h3>
                 <section className="searchResults">
                     {searchResults}
                 </section>
