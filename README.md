@@ -6,7 +6,7 @@ ___
 
 ## Technical Choices 
 
-### React/Redux: 
+### React: 
 
 I've chosen React because I have prior experience building React applications and it's suited for building progressive web applications with its performance and fast rendering. 
 
