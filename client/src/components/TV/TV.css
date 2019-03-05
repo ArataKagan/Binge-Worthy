@@ -5,7 +5,15 @@
 }
 
 .poster {
-    padding: 40px;
+    padding: 40px 0px 40px 40px;
+}
+
+#tv_image {
+    size: auto;
+    border-radius: 3px;
+    height: 400px; 
+    box-shadow: 10px 10px 5px grey;
+    
 }
 
 .poster_wrapper {
