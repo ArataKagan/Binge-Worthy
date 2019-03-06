@@ -25,12 +25,12 @@ ___
 
 ## How to Run under Local Host 
 
-1. Go to root directory 
+1. Go to the root directory 
 2. `npm run dev`
 
 ## How to Test
 
-1. Go to client directory
+1. Go to the client directory
 2. `npm run test`
 
 ___ 
