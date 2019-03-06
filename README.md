@@ -1,6 +1,6 @@
 # Binge Worthy 
 
-This is a TV recommendation app made with React, Node and Movie Database API.   
+This is a TV show discovery app made with React, Node and Movie Database API.   
 Please see the production site [here](https://murmuring-dusk-88857.herokuapp.com/).
 ___
 
