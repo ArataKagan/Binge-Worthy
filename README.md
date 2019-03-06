@@ -19,19 +19,19 @@ ___
 ## How to Clone 
 
 1. `git clone https://github.com/ArataKagan/TV-list-app`
-2. cd TV-list-app
-3. npm install 
-4. npm run client-install
+2. `cd TV-list-app`
+3. `npm install` 
+4. `npm run client-install`
 
 ## How to Run under Local Host 
 
 1. Go to root directory 
-2. npm run dev
+2. `npm run dev`
 
 ## How to Test
 
 1. Go to client directory
-2. npm run test
+2. `npm run test`
 
 ___ 
 ## Existing features 
