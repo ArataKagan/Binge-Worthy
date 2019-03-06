@@ -17,32 +17,7 @@ Since I have experience building Node applications and it has great compatibilit
 ___
 ## File Structure Inside of Client Folder
 
-├── App.css
-├── App.js
-├── assets
-│   └── logo.jpeg
-├── components
-│   ├── NavBar
-│   │   └── NavBar.js
-│   ├── SearchResult
-│   │   ├── SearchResult.css
-│   │   └── SearchResult.js
-│   ├── TV
-│   │   ├── TV.css
-│   │   └── TV.js
-│   └── landing
-│       ├── Library
-│       │   ├── Library.css
-│       │   ├── Library.js
-│       │   └── Library.test.js
-│       └── SearchBox
-│           ├── SearchBox.css
-│           └── SearchBox.js
-├── config
-│   └── keys.js
-├── index.css
-├── index.js
-└── serviceWorker.js
+[Imgur](https://i.imgur.com/DNls5YA.png)
 
 ## How to Clone 
 
