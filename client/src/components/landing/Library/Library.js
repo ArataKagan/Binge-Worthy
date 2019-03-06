@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import './Library.css';
-import SearchBox from '../Search/Search';
+import SearchBox from '../SearchBox/SearchBox';
 import axios from 'axios';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w200';
 

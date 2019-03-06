@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './Search.css';
+import './SearchBox.css';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 const BASE_URL = 'https://api.themoviedb.org/3/search/tv?api_key=fb6a1d3f38c3d97f67df6d141f936f29&language=en-US&query='
 
-class Search extends Component { 
+class SearchBox extends Component { 
     state = {
         typedWords : '',
         keyword: [],
@@ -59,4 +59,4 @@ class Search extends Component {
     }
 }
 
-export default Search;
+export default SearchBox;
