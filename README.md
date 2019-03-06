@@ -15,9 +15,6 @@ I've chosen React because I have prior experience building React applications an
 Since I have experience building Node applications and it has great compatibility with React library, I've chosen Node/Express for the back-end.  
 
 ___
-## File Structure Inside of Client Folder
-
-![Imgur](https://i.imgur.com/DNls5YA.png)
 
 ## How to Clone 
 
