@@ -17,7 +17,7 @@ Since I have experience building Node applications and it has great compatibilit
 ___
 ## File Structure Inside of Client Folder
 
-[Imgur](https://i.imgur.com/DNls5YA.png)
+![Imgur](https://i.imgur.com/DNls5YA.png)
 
 ## How to Clone 
 
