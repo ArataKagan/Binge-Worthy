@@ -18,7 +18,7 @@ ___
 
 ## How to Clone 
 
-1. git clone https://github.com/ArataKagan/TV-list-app
+1. `git clone https://github.com/ArataKagan/TV-list-app`
 2. cd TV-list-app
 3. npm install 
 4. npm run client-install
