@@ -1,6 +1,6 @@
 # Binge Worthy 
 
-![Imgur](https://i.imgur.com/vStjBJb.png)
+![Imgur](https://i.imgur.com/FdSAUkO.png)
 
 This is a TV show discovery app made with React, Node and Movie Database API.   
 Please see the production site [here](https://murmuring-dusk-88857.herokuapp.com/).
