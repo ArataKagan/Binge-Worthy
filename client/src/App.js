@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 /* Need to setup router to assign a path for each component*/
 /*import Route and Link from react-router-dom package */
 import { Route} from 'react-router-dom';
 import './App.css';
-import Library from './components/Library/Library';
+import Library from './components/landing/Library/Library';
 import TV from './components/TV/TV';
 import NavBar from './components/NavBar/NavBar';
 import SearchResult from './components/SearchResult/SearchResult';
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
       <div className="App" >
         <nav>
@@ -22,7 +21,7 @@ class App extends Component {
         </main>
       </div>
     );
-  }
+  
 }
 
 export default App;
