@@ -1,21 +1,18 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
 const path = require('path');
 
+
 require('dotenv').config();
 
-// Body parser middleware
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
-app.use("/", (req, res, next) => {
-    res.send("Welcome to TV list app");
-})
+app.get('/', (req, res) => res.send("API running"));
 
-// app.get('/api/hello', (req, res) => {
-//     res.send({express: 'Hello from Express'});
-// });
+// api
+app.use("/api/auth", require('./api/auth'));
+app.use("/api/register", require('./api/register'));
 
 // Serve static assets if it's in production
 if(process.env.NODE_ENV === 'production'){
