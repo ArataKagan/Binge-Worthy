@@ -1,9 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const {check, validationResult} = require('express-validator');
-const User = require('../models/user');
+const User = require('../models').User;
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+
+router.get(
+    '/', (req, res) => {
+        res.send("Inside of get request.");
+});
+
 
 router.post(
     '/',
@@ -31,12 +37,14 @@ router.post(
             const salt = await bcrypt.genSalt(10);
             const hashedPassword = await bcrypt.hash(password, salt);
 
-            await User.create({
+            const newUser = User.create({
                 username,
                 password: hashedPassword,
                 phoneNumber,
                 verificationMethod
             });
+
+            console.log("New User: " + newUser);
 
             const payload = {
                 user: {
@@ -58,7 +66,6 @@ router.post(
             res.status(500).send("Sever error");
         }
     }
-
-(req, res) => {res.send("Inside of register route")});
+);
 
 module.exports = router;
